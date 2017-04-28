@@ -20,17 +20,6 @@ nav {
   -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
   transition: background .2s ease-in-out, border .2s ease-in-out;
 }
-
-//     .btn-custom:active {
-//       color: rgba(255, 255, 255, .4);
-//       border: 2px solid #4992B7;
-//       background-color: transparent;
-// }
-//     .btn-custom:focus {
-//       color: rgba(255, 255, 255, .4);
-//       border: 2px solid #4992B7;
-//       background-color: transparent;
-// }
     .btn-transparent:hover {
         color: white;
         background-color: rgba(255, 255, 255, .2);
@@ -46,6 +35,14 @@ h1 {
   color: white;
   font-family: 'Bungee', cursive;
   font-size: 50px;
+  opacity: .3;
+  text-align: center;
+}
+
+.UAtext {
+  color: white;
+  font-family: 'Bungee', cursive;
+  font-size: 29px;
   opacity: .3;
   text-align: center;
 }

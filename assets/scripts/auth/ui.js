@@ -2,19 +2,33 @@
 const store = require('../store.js')
 
 const signUpSuccess = (data) => {
-  console.log('thanks for signing up')
   $('#signUpModal').modal('hide')
   $('input').val('')
 }
 
 const signUpFailure = () => {
-  console.log('error signing up')
+  $('.UAtext').text('Error Signing up!')
+  $('.UAtext').show
   $('#signUpModal').modal('hide')
   $('input').val('')
 }
 
+const autoSignInSuccess = (data) => {
+  $('.UAtext').text('Welcome!')
+  $('.hideOnStart').show()
+  $('.hideOnStartTwo').show()
+  $('.hideOnSignIn').hide()
+  $('.hideOnSignInTwo').hide()
+  $('#signInModal').modal('hide')
+  $('input').val('')
+
+  // store the user object as per below
+  store.user = data.user
+}
+
+// add shows where applicable
 const signInSuccess = (data) => {
-  console.log('thanks for signing in')
+  $('.UAtext').text('Welcome!')
   $('.hideOnStart').show()
   $('.hideOnStartTwo').show()
   $('.hideOnSignIn').hide()
@@ -27,43 +41,52 @@ const signInSuccess = (data) => {
 }
 
 const signInFailure = () => {
-  console.log('error signing in')
+  $('.UAtext').text('Sign in failure!')
+  $('#signInModal').modal('hide')
+  $('input').val('')
+}
+
+const autoSignInFailure = () => {
+  $('.UAtext').text('Sign in failure!')
   $('#signInModal').modal('hide')
   $('input').val('')
 }
 
 const changePasswordSuccess = (data) => {
-  console.log('password changed')
+  $('.UAtext').text('Password Changed')
   $('#changePasswordModal').modal('hide')
   $('input').val('')
 }
 
 const changePasswordFailure = () => {
-  console.log('error changing password')
+  $('.UAtext').text('Error Changing Password!')
   $('#changePasswordModal').modal('hide')
   $('input').val('')
 }
 
 const signOutSuccess = (data) => {
-  console.log('sign out success')
+  $('.UAtext').text('You have signed out!')
   $('.authText').hide()
   $('.hideOnStart').hide()
   $('.hideOnStartTwo').hide()
   $('.hideOnSignIn').show()
   $('.hideOnSignInTwo').show()
+  $('.UAtext').show()
   $('#signOutModal').modal('hide')
   // store the user with a value of null as per below
   store.user = null
 }
 
 const signOutFailure = () => {
-  console.log('sign out failure')
+  $('.UAtext').text('Sign out faulire!')
   $('#signOutModal').modal('hide')
 }
 
 module.exports = {
   signUpSuccess,
   signUpFailure,
+  autoSignInSuccess,
+  autoSignInFailure,
   signInSuccess,
   signInFailure,
   changePasswordSuccess,

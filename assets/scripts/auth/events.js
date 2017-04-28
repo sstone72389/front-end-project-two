@@ -5,11 +5,15 @@ const api = require('./api')
 const ui = require('./ui')
 
 const onSignUp = function (event) {
-  console.log('thanks for trying')
   const data = getFormFields(this)
   event.preventDefault()
   api.signUp(data)
     .then(ui.signUpSuccess)
+    .then(() => {
+      api.signInAuto(data)
+      .then(ui.autoSignInSuccess)
+      .catch(ui.autoSignInFailure)
+    })
     .catch(ui.signUpFailure)
 }
 
@@ -20,6 +24,13 @@ const onSignIn = function (event) {
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
 }
+
+// const onAutoSignIn = function (data) {
+//   event.preventDefault()
+//   api.signIn(data)
+//     .then(ui.signInSuccess)
+//     .catch(ui.signInFailure)
+// }
 
 const onChangePassword = function (event) {
   const data = getFormFields(this)
