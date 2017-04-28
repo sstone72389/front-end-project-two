@@ -1,2 +1,67 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+.hideOnStart, .hideOnStartTwo {
+  display: none;
+}
+
+nav {
+  text-align: center;
+}
+
+.btn-transparent {
+  background: transparent;
+  border: 2px solid #4992B7;
+  color: rgba(255, 255, 255, .4);
+  // color: #F2F2F2;
+  -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+  -moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+  -o-transition: background .2s ease-in-out, border .2s ease-in-out;
+  -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+  transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+//     .btn-custom:active {
+//       color: rgba(255, 255, 255, .4);
+//       border: 2px solid #4992B7;
+//       background-color: transparent;
+// }
+//     .btn-custom:focus {
+//       color: rgba(255, 255, 255, .4);
+//       border: 2px solid #4992B7;
+//       background-color: transparent;
+// }
+    .btn-transparent:hover {
+        color: white;
+        background-color: rgba(255, 255, 255, .2);
+    }
+
+body {
+  background-attachment: fixed;
+  background-image: url('http://res.cloudinary.com/dfu4pwocw/image/upload/v1493251336/bkBjWxa-starry-sky-background_utu895.jpg');
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: white;
+  font-family: 'Bungee', cursive;
+  font-size: 50px;
+  opacity: .3;
+  text-align: center;
+}
+
+p {
+  color: white;
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 20px;
+  text-align: center;
+}
+
+input {
+  border: 2px solid lightgray;
+  border-radius: 4px;
+}
+
+footer {
+  float: right;
+}
