@@ -25,13 +25,6 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
-// const onAutoSignIn = function (data) {
-//   event.preventDefault()
-//   api.signIn(data)
-//     .then(ui.signInSuccess)
-//     .catch(ui.signInFailure)
-// }
-
 const onChangePassword = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
@@ -49,7 +42,7 @@ const onSignOut = function (event) {
 }
 
 const addHandlers = () => {
-  $('#sign-up').on('submit', onSignUp)
+  $('#sign-up').on('submit', onSignUp).blur()
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)

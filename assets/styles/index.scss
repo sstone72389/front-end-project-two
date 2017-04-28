@@ -20,10 +20,17 @@ nav {
   -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
   transition: background .2s ease-in-out, border .2s ease-in-out;
 }
-    .btn-transparent:hover {
-        color: white;
-        background-color: rgba(255, 255, 255, .2);
-    }
+
+.btn-transparent:focus {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, .4);
+}
+
+.btn-transparent:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, .2);
+}
 
 body {
   background-attachment: fixed;
