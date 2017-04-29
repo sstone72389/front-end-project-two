@@ -10,6 +10,7 @@ const startList = function () {
           const toAdd = $('.listInput').val()
           $('ol').append('<li>' + toAdd + '</li>')
           incompleteTasks.push(toAdd)
+          $('.listInput').val('')
           console.log(incompleteTasks)
         })
       // allows you to hit enter to add items
