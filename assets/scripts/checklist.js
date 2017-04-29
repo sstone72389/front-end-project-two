@@ -9,11 +9,10 @@ const startList = function () {
           $('ol').append('<li>' + toAdd + '</li>')
         })
       // allows you to hit enter to add items
-      // not yet functional
-      $('input[name=ListItem]').keyup(function (event) {
-        // event.preventDefault()
-        if (event.keyCode === 13) {
+      $('input[name=ListItem]').keypress(function (event) {
+        if (event.which === 13) {
           $('#button').click()
+          event.preventDefault()
         }
       })
 
