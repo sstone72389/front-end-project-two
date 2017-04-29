@@ -8,13 +8,14 @@ const signUpSuccess = (data) => {
 
 const signUpFailure = () => {
   $('.UAtext').text('Error Signing up!')
-  $('.UAtext').show
   $('#signUpModal').modal('hide')
   $('input').val('')
 }
 
 const autoSignInSuccess = (data) => {
-  $('.UAtext').text('Welcome!')
+  $('.UAtext').text('Welcome! Start your list below. Double click to remove an item.')
+  $('.container').show()
+  $('.defText').hide()
   $('.hideOnStart').show()
   $('.hideOnStartTwo').show()
   $('.hideOnSignIn').hide()
@@ -28,7 +29,9 @@ const autoSignInSuccess = (data) => {
 
 // add shows where applicable
 const signInSuccess = (data) => {
-  $('.UAtext').text('Welcome!')
+  $('.UAtext').text('Welcome! Start your list below. Click to remove an item.')
+  $('.container').show()
+  $('.defText').hide()
   $('.hideOnStart').show()
   $('.hideOnStartTwo').show()
   $('.hideOnSignIn').hide()
@@ -65,8 +68,9 @@ const changePasswordFailure = () => {
 }
 
 const signOutSuccess = (data) => {
-  $('.UAtext').text('You have signed out!')
-  $('.authText').hide()
+  $('.UAtext').text('Sign in to start using our services!')
+  $('.container').hide()
+  $('.defText').show()
   $('.hideOnStart').hide()
   $('.hideOnStartTwo').hide()
   $('.hideOnSignIn').show()
