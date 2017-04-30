@@ -7,13 +7,22 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 }
 
 nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  // height: 30px;
+  width: 100%;
+  background: #999;
+  opacity: 0.4;
   text-align: center;
+  z-index: 1000;
 }
 
 .btn-transparent {
   background: transparent;
   border: 2px solid #4992B7;
-  color: rgba(255, 255, 255, .4);
+  color: darkblue;
+  font-weight: 600;
   // color: #F2F2F2;
   -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
   -moz-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
@@ -43,6 +52,7 @@ h1 {
   color: white;
   font-family: 'Bungee', cursive;
   font-size: 45px;
+  margin-top: 10px;
   opacity: 0.3;
   text-align: center;
 }
