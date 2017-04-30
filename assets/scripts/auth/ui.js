@@ -12,24 +12,24 @@ const signUpFailure = () => {
   $('input').val('')
 }
 
-const autoSignInSuccess = (data) => {
-  $('.UAtext').text('Welcome! Start your list below. Double click to remove an item.')
-  $('.container').show()
-  $('.defText').hide()
-  $('.hideOnStart').show()
-  $('.hideOnStartTwo').show()
-  $('.hideOnSignIn').hide()
-  $('.hideOnSignInTwo').hide()
-  $('#signInModal').modal('hide')
-  $('input').val('')
-
-  // store the user object as per below
-  store.user = data.user
-}
+// const autoSignInSuccess = (data) => {
+//   $('.UAtext').text("Don't forget to start your list. Double click to remove an item.")
+//   $('.container').show()
+//   $('.defText').hide()
+//   $('.hideOnStart').show()
+//   $('.hideOnStartTwo').show()
+//   $('.hideOnSignIn').hide()
+//   $('.hideOnSignInTwo').hide()
+//   $('#signInModal').modal('hide')
+//   $('input').val('')
+//
+//   // store the user object as per below
+//   store.user = data.user
+// }
 
 // add shows where applicable
 const signInSuccess = (data) => {
-  $('.UAtext').text('Welcome! Start your list below. Double click to remove an item.')
+  $('.UAtext').text("Don't forget to start your list. Double click to remove an item.")
   $('.container').show()
   $('.defText').hide()
   $('.hideOnStart').show()
@@ -68,7 +68,7 @@ const changePasswordFailure = () => {
 }
 
 const signOutSuccess = (data) => {
-  $('.UAtext').text('Sign in to start using our services!')
+  $('.UAtext').text("★ Dont't get caught spacing out. Sign in to get started! ★")
   $('.container').hide()
   $('.defText').show()
   $('.hideOnStart').hide()
@@ -89,7 +89,7 @@ const signOutFailure = () => {
 module.exports = {
   signUpSuccess,
   signUpFailure,
-  autoSignInSuccess,
+  // autoSignInSuccess,
   autoSignInFailure,
   signInSuccess,
   signInFailure,

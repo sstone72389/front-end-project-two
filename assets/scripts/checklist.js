@@ -39,6 +39,12 @@ const startList = function () {
   )
 }
 
+  // const addedItem = function () {
+  //   $('#button').on('click', function () {
+  //     $('.UAtext').text('Are you forgetting something?')
+  //   )}
+
 module.exports = {
   startList
+  // addedItem
 }

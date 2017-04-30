@@ -18,13 +18,13 @@ const signIn = (data) => {
   })
 }
 
-const signInAuto = (data) => {
-  return $.ajax({
-    url: config.apiOrigin + '/sign-in',
-    method: 'POST',
-    data
-  })
-}
+// const signInAuto = (data) => {
+//   return $.ajax({
+//     url: config.apiOrigin + '/sign-in',
+//     method: 'POST',
+//     data
+//   })
+// }
 
 const changePassword = (data) => {
   return $.ajax({
@@ -50,7 +50,7 @@ const signOut = () => {
 module.exports = {
   signUp,
   signIn,
-  signInAuto,
+  // signInAuto,
   changePassword,
   signOut
 }
