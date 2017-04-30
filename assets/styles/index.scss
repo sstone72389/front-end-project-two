@@ -7,10 +7,11 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 }
 
 nav {
+  // display: inline block
   position: fixed;
   left: 0;
   top: 0;
-  // height: 30px;
+  height: 47px;
   width: 100%;
   background: #999;
   opacity: 0.4;
@@ -18,12 +19,18 @@ nav {
   z-index: 1000;
 }
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 .btn-transparent {
   background: transparent;
-  border: 2px solid #4992B7;
-  color: darkblue;
+  color: rgba(23, 23, 155, .8);
   font-weight: 600;
-  // color: #F2F2F2;
   -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
   -moz-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
   -o-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
@@ -34,7 +41,7 @@ nav {
 .btn-transparent:focus {
   background: transparent;
   outline: none;
-  color: rgba(255, 255, 255, .4);
+  color: rgba(23, 23, 155, .8);
 }
 
 .btn-transparent:hover {
@@ -49,18 +56,20 @@ body {
 }
 
 h1 {
-  color: white;
+  color: rgba(23, 23, 155, .8);
+  font-weight: 600;
   font-family: 'Bungee', cursive;
-  font-size: 45px;
+  font-size: 28px;
+  margin-left: 30%;
   margin-top: 10px;
-  opacity: 0.3;
   text-align: center;
+  float: left;
 }
 
 h2 {
   color: white;
   font-family: 'Bungee', cursive;
-  font-size: 18px;
+  font-size: 20px;
   opacity: 0.3;
   text-align: center;
 }
@@ -68,7 +77,7 @@ h2 {
 .UAtext {
   color: white;
   font-family: 'Bungee', cursive;
-  font-size: 18px;
+  font-size: 20px;
   opacity: 0.3;
   text-align: center;
 }
@@ -145,11 +154,6 @@ ol li:nth-child(even) {
 li:hover {
   cursor: pointer;
 }
-// footer {
-//   // try not to let this move around???
-//   // position: relative;
-//   float: right;
-// }
 
 footer {
   position: fixed;
@@ -166,4 +170,31 @@ footer {
   font-family: 'Patrick Hand SC', cursive;
   font-size: 20px;
   text-align: center;
+}
+
+@media only screen and (max-width: 736px) {
+  h1 {
+    font-size: 16px;
+    margin-left: 8%;
+  }
+
+  nav {
+    width: 736px;
+    height: 46px;
+  }
+
+  .container {
+    width: 340px;
+  }
+
+  .container-fluid {
+    width: 375px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 25px;
+    margin-left: 27%;
+  }
 }

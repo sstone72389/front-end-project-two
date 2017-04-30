@@ -23,7 +23,7 @@ const startList = function () {
 
       // strikes and fades out clicked list items
       // adds value of clicked item into completeTasks array
-      $(document).on('dblclick', 'li', function () {
+      $(document).on('click', 'li', function () {
         $(this).toggleClass('strike').fadeOut('slow')
         // checks index of list item, may ne unimportant
         // const index = $(this).index()

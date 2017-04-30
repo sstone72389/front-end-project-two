@@ -29,7 +29,7 @@ const signUpFailure = () => {
 
 // add shows where applicable
 const signInSuccess = (data) => {
-  $('.UAtext').text("Don't forget to start your list. Double click to remove an item.")
+  $('.UAtext').text("Don't forget to start your list. Click to remove an item.")
   $('.container').show()
   $('.defText').hide()
   $('.hideOnStart').show()
