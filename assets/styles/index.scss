@@ -75,9 +75,9 @@ input {
 }
 
 .container {
-  // display: none;
+  display: none;
   padding: 20px;
-  width: 550px;
+  width: 575px;
   margin: 0 auto;
   margin-top: 40px;
   background: transparent;
@@ -108,9 +108,10 @@ input {
 ol {
   padding-left: 20px;
   font-family: 'Patrick Hand SC', cursive;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   list-style-position: inside;
+  user-select: none;
 }
 
 li {
@@ -134,8 +135,17 @@ li:hover {
   cursor: pointer;
 }
 
+// footer {
+//   // try not to let this move around???
+//   // position: relative;
+//   float: right;
+// }
 footer {
-  // try not to let this move around???
-  // position: relative;
-  float: right;
+   position: fixed;
+   left: 0px;
+   bottom: 0px;
+   height: 30px;
+   width: 100%;
+   background: #999;
+   opacity: .6;
 }

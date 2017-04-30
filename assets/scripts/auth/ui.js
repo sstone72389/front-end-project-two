@@ -29,7 +29,7 @@ const autoSignInSuccess = (data) => {
 
 // add shows where applicable
 const signInSuccess = (data) => {
-  $('.UAtext').text('Welcome! Start your list below. Click to remove an item.')
+  $('.UAtext').text('Welcome! Start your list below. Double click to remove an item.')
   $('.container').show()
   $('.defText').hide()
   $('.hideOnStart').show()
