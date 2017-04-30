@@ -19,6 +19,13 @@ nav {
   z-index: 1000;
 }
 
+// make modal clear!!!
+// .modal-footer,
+// .modal-body,
+// .modal-header {
+//   opacity: .2;
+// }
+
 .left {
   float: left;
 }
@@ -46,7 +53,28 @@ nav {
 
 .btn-transparent:hover {
   color: white;
-  background-color: rgba(255, 255, 255, .2);
+}
+.btn-transparent-two {
+  background: transparent;
+  border: 2px solid rgba(255, 225, 255, .2);
+  color: rgba(255, 225, 255, .5);
+  font-weight: 500;
+  -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.btn-transparent-two:focus {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 225, 255, .2);
+}
+
+.btn-transparent-two:hover {
+  color: white;
+  background-color: rgba(255, 225, 255, .8);
 }
 
 body {
@@ -60,7 +88,7 @@ h1 {
   font-weight: 600;
   font-family: 'Bungee', cursive;
   font-size: 28px;
-  margin-left: 30%;
+  margin-left: 33%;
   margin-top: 10px;
   text-align: center;
   float: left;
@@ -172,14 +200,25 @@ footer {
   text-align: center;
 }
 
-@media only screen and (max-width: 736px) {
+@media only screen and (max-width: 1023px) {
   h1 {
-    font-size: 16px;
-    margin-left: 8%;
+    font-size: 25px;
+    margin-left: 27%;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  h1 {
+    font-size: 22px;
+    margin-left: 27%;
+  }
+
+  h2.UAtext {
+    font-size: 17px;
   }
 
   nav {
-    width: 736px;
+    width: 100%;
     height: 46px;
   }
 
@@ -192,9 +231,50 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 667px) {
   h1 {
-    font-size: 25px;
-    margin-left: 27%;
+    font-size: 19px;
+    margin-left: 22%;
+  }
+
+  h2.UAtext {
+    font-size: 16px;
+  }
+
+  nav {
+    width: 100%;
+    height: 44px;
+  }
+
+  .container {
+    width: 330px;
+  }
+
+  .container-fluid {
+    width: 345px;
+  }
+}
+
+@media only screen and (max-width: 514px) {
+  h1 {
+    font-size: 16px;
+    margin-left: 21%;
+  }
+
+  h2.UAtext {
+    font-size: 14px;
+  }
+
+  nav {
+    width: 514px;
+    height: 42px;
+  }
+
+  .container {
+    width: 310px;
+  }
+
+  .container-fluid {
+    width: 315px;
   }
 }
