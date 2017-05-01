@@ -54,11 +54,13 @@ nav {
 .btn-transparent:hover {
   color: white;
 }
+
 .btn-transparent-two {
   background: transparent;
-  border: 2px solid rgba(255, 225, 255, .2);
-  color: rgba(255, 225, 255, .5);
-  font-weight: 500;
+  // border: 2px solid rgba(255, 225, 255, .1);
+  color: rgba(23, 23, 155, .6);
+  font-size: 19px;
+  font-weight: 900;
   -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
   -moz-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
   -o-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
@@ -73,8 +75,8 @@ nav {
 }
 
 .btn-transparent-two:hover {
-  color: white;
-  background-color: rgba(255, 225, 255, .8);
+  color: rgba(255, 255, 255, .5);
+  // background-color: rgba(255, 225, 255, .2);
 }
 
 body {
@@ -85,10 +87,10 @@ body {
 
 h1 {
   color: rgba(23, 23, 155, .8);
-  font-weight: 600;
+  font-weight: 900;
   font-family: 'Bungee', cursive;
   font-size: 28px;
-  margin-left: 33%;
+  margin-left: 34%;
   margin-top: 10px;
   text-align: center;
   float: left;
@@ -96,24 +98,28 @@ h1 {
 
 h2 {
   color: white;
-  font-family: 'Bungee', cursive;
+  font-family: 'Bungee Hairline', cursive;
   font-size: 20px;
-  opacity: 0.3;
+  font-weight: 700;
+  opacity: 0.5;
   text-align: center;
 }
 
 .UAtext {
   color: white;
-  font-family: 'Bungee', cursive;
-  font-size: 20px;
-  opacity: 0.3;
+  font-family: 'Bungee Hairline', cursive;
+  font-weight: 700;
+  font-size: 22px;
+  opacity: 0.6;
   text-align: center;
 }
 
 p {
   color: white;
-  font-family: 'Patrick Hand SC', cursive;
-  font-size: 20px;
+  font-family: 'Bungee Hairline', cursive;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 44px;
   text-align: center;
   opacity: 0.5;
 }
@@ -134,9 +140,13 @@ input {
 
 .listDesc {
   color: #0D2CA0;
-  font-family: 'Patrick Hand SC', cursive;
+  font-family: 'Patrick Hand', cursive;
   font-size: 20px;
   text-align: center;
+}
+
+h2.iphoneFive {
+  font-size: 26px;
 }
 
 .toDoList {
@@ -146,7 +156,7 @@ input {
 .listInput {
   text-align: left;
   padding: 4px 15px 4px 5px;
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .center {
@@ -155,8 +165,9 @@ input {
 
 ol {
   padding-left: 20px;
-  font-family: 'Patrick Hand SC', cursive;
-  font-size: 30px;
+  font-family: 'Bungee Hairline', cursive;
+  font-weight: 900;
+  font-size: 24px;
   text-align: center;
   list-style-position: inside;
   user-select: none;
@@ -206,11 +217,10 @@ footer {
     margin-left: 27%;
   }
 }
-
 @media only screen and (max-width: 735px) {
   h1 {
     font-size: 22px;
-    margin-left: 27%;
+    margin-left: 29%;
   }
 
   h2.UAtext {
@@ -230,11 +240,10 @@ footer {
     width: 375px;
   }
 }
-
 @media only screen and (max-width: 667px) {
   h1 {
     font-size: 19px;
-    margin-left: 22%;
+    margin-left: 24%;
   }
 
   h2.UAtext {
@@ -254,7 +263,6 @@ footer {
     width: 345px;
   }
 }
-
 @media only screen and (max-width: 514px) {
   h1 {
     font-size: 16px;

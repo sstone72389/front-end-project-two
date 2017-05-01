@@ -39,12 +39,14 @@ const startList = function () {
   )
 }
 
-  // const addedItem = function () {
-  //   $('#button').on('click', function () {
-  //     $('.UAtext').text('Are you forgetting something?')
-  //   )}
+const addedItem = function () {
+  $('#button').on('click', function () {
+    $('.UAtext').text('Are you forgetting something?')
+    $('.UAtext').show
+  })
+}
 
 module.exports = {
-  startList
-  // addedItem
+  startList,
+  addedItem
 }
