@@ -29,7 +29,7 @@ HTML, CSS, JS, jQuery, JSON, AJAX, Git, GitHub, Grunt, Rails, Sass, Bootstrap, R
 Links to Wireframes:
 
 Main page:
-http://res.cloudinary.com/dfu4pwocw/image/upload/v1493247872/image1_hugf9b.jpg
+<http://res.cloudinary.com/dfu4pwocw/image/upload/v1493247872/image1_hugf9b.jpg>
 
 Login/signup screen
-http://res.cloudinary.com/dfu4pwocw/image/upload/v1493247879/image2_l7t3ay.jpg
+<http://res.cloudinary.com/dfu4pwocw/image/upload/v1493247879/image2_l7t3ay.jpg>

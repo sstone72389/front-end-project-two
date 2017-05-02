@@ -20,11 +20,13 @@ nav {
 }
 
 // make modal clear!!!
-// .modal-footer,
-// .modal-body,
-// .modal-header {
-//   opacity: .2;
-// }
+.modal-content,
+.modal-footer,
+.modal-body,
+.modal-header {
+  opacity: .7;
+  border: 0;
+}
 
 .left {
   float: left;
@@ -58,7 +60,8 @@ nav {
 .btn-transparent-two {
   background: transparent;
   // border: 2px solid rgba(255, 225, 255, .1);
-  color: rgba(23, 23, 155, .6);
+  color: rgba(255, 255, 255, .2);
+  font-family: 'Bungee', cursive;
   font-size: 19px;
   font-weight: 900;
   -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
@@ -71,11 +74,35 @@ nav {
 .btn-transparent-two:focus {
   background: transparent;
   outline: none;
-  color: rgba(255, 225, 255, .2);
+  color: rgba(255, 255, 255, .2);
 }
 
 .btn-transparent-two:hover {
   color: rgba(255, 255, 255, .5);
+  // background-color: rgba(255, 225, 255, .2);
+}
+
+.btn-transparent-three {
+  background: transparent;
+  // border: 2px solid rgba(255, 225, 255, .1);
+  color: rgba(23, 23, 155, .8);
+  font-size: 18px;
+  font-weight: 900;
+  -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.btn-transparent-three:focus {
+  background: transparent;
+  outline: none;
+  color: rgba(23, 23, 155, .8);
+}
+
+.btn-transparent-three:hover {
+  color: lightgray;
   // background-color: rgba(255, 225, 255, .2);
 }
 
@@ -101,8 +128,14 @@ h2 {
   font-family: 'Bungee Hairline', cursive;
   font-size: 20px;
   font-weight: 700;
-  opacity: 0.5;
+  opacity: 0.6;
   text-align: center;
+}
+
+h4 {
+  color: rgba(23, 23, 155, .8);
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .UAtext {
@@ -146,7 +179,7 @@ input {
 }
 
 h2.iphoneFive {
-  font-size: 26px;
+  font-size: 23px;
 }
 
 .toDoList {
@@ -210,17 +243,34 @@ footer {
   font-size: 20px;
   text-align: center;
 }
-
+@media only screen and (max-width: 1365px) {
+  h1 {
+    font-size: 30px;
+    margin-left: 31%;
+  }
+  h2.UAtext {
+    font-size: 25px;
+  }
+  p {
+    font-size: 21px;
+  }
+}
 @media only screen and (max-width: 1023px) {
   h1 {
     font-size: 25px;
     margin-left: 27%;
   }
+  h2.UAtext {
+    font-size: 19px;
+  }
+  p {
+    font-size: 20px;
+  }
 }
-@media only screen and (max-width: 735px) {
+@media only screen and (max-width: 736px) and (min-width: 668px){
   h1 {
-    font-size: 22px;
-    margin-left: 29%;
+    font-size: 25px;
+    margin-left: 25%;
   }
 
   h2.UAtext {
@@ -240,10 +290,10 @@ footer {
     width: 375px;
   }
 }
-@media only screen and (max-width: 667px) {
+@media only screen and (max-width: 667px) and (min-width: 516px) {
   h1 {
     font-size: 19px;
-    margin-left: 24%;
+    margin-left: 18%;
   }
 
   h2.UAtext {
@@ -263,26 +313,31 @@ footer {
     width: 345px;
   }
 }
-@media only screen and (max-width: 514px) {
-  h1 {
-    font-size: 16px;
-    margin-left: 21%;
-  }
-
-  h2.UAtext {
-    font-size: 14px;
-  }
-
-  nav {
-    width: 514px;
-    height: 42px;
-  }
-
-  .container {
-    width: 310px;
-  }
-
-  .container-fluid {
-    width: 315px;
-  }
-}
+// @media only screen and (max-width: 515px) {
+//   h1 {
+//     font-size: 14px;
+//     margin-left: 7%;
+//   }
+//
+//   h2.UAtext {
+//     font-size: 14px;
+//   }
+//
+//   p {
+//     font-size: 10px;
+//     opacity: 1;
+//   }
+//
+//   nav {
+//     width: 100%;
+//     height: 42px;
+//   }
+//
+//   .container {
+//     width: 310px;
+//   }
+//
+//   .container-fluid {
+//     width: 315px;
+//   }
+// }
