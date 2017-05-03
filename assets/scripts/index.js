@@ -2,7 +2,7 @@
 
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
-const list = require('./checklist')
+// const list = require('./checklist')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -19,5 +19,5 @@ const authEvents = require('./auth/events.js')
 // On document ready
 $(() => {
   authEvents.addHandlers()
-  list.startList()
+  // list.startList()
 })
