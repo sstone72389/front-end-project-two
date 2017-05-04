@@ -1,4 +1,4 @@
-// // startList to be exported and linked
+// startList to be exported and linked
 // const startList = function () {
 //   const incompleteTasks = []
 //   const completeTasks = []
