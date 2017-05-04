@@ -230,7 +230,7 @@ footer {
   position: fixed;
   left: 0;
   bottom: 0;
-  height: 30px;
+  height: 31px;
   width: 100%;
   background: #999;
   opacity: 0.5;
@@ -244,16 +244,16 @@ footer {
 }
 @media only screen and (max-width: 1024px) {
   h1 {
-    font-size: 28px;
+    font-size: 25px;
     margin-left: 30%;
   }
 
   h2.UAtext {
-    font-size: 25px;
+    font-size: 19px;
   }
 
   p {
-    font-size: 21px;
+    font-size: 16px;
   }
   // li {
   //   font-size: 21px;
@@ -266,11 +266,11 @@ footer {
   }
 
   h2.UAtext {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   p {
-    font-size: 16px;
+    font-size: 15px;
   }
   // li {
   //   font-size: 16px;
@@ -283,10 +283,11 @@ footer {
   }
 
   h2.UAtext {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   p {
+      font-size: 13px;
       opacity: .7;
   }
 
@@ -310,12 +311,12 @@ footer {
   }
 
   h2.UAtext {
-    font-size: 16px;
+    font-size: 14px;
     opacity: .7;
   }
 
   p{
-    font-size: 13px;
+    font-size: 10px;
     opacity: 1;
   }
 
