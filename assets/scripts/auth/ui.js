@@ -12,21 +12,6 @@ const signUpFailure = () => {
   $('input').val('')
 }
 
-// const autoSignInSuccess = (data) => {
-//   $('.UAtext').text("Don't forget to start your list.")
-//   $('.container').show()
-//   $('.defText').hide()
-//   $('.hideOnStart').show()
-//   $('.hideOnStartTwo').show()
-//   $('.hideOnSignIn').hide()
-//   $('.hideOnSignInTwo').hide()
-//   $('#signInModal').modal('hide')
-//   $('input').val('')
-//
-//   // store the user object as per below
-//   store.user = data.user
-// }
-
 // add shows where applicable
 const signInSuccess = (data) => {
   $('.UAtext').text("Don't forget to start your list.")
@@ -89,7 +74,6 @@ const signOutFailure = () => {
 module.exports = {
   signUpSuccess,
   signUpFailure,
-  // autoSignInSuccess,
   autoSignInFailure,
   signInSuccess,
   signInFailure,

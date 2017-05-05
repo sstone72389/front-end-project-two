@@ -24,7 +24,7 @@ const startList = function () {
       // strikes and fades out clicked list items
       // adds value of clicked item into completeTasks array
       $(document).on('click', 'li', function () {
-        $(this).toggleClass('strike').fadeOut('slow')
+        $(this).toggleClass('strike')
         // checks index of list item, may ne unimportant
         // const index = $(this).index()
         const text = $(this).text()
