@@ -51,10 +51,23 @@ const addsTask = (data) => {
   })
 }
 
+const showsTasks = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: config.apiOrigin + '/tasks',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  addsTask
+  addsTask,
+  showsTasks
 }

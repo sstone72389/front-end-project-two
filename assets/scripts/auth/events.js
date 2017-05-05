@@ -49,12 +49,22 @@ const addTask = function (event) {
     .catch(ui.addTaskFailure)
 }
 
+const showTasks = function (event) {
+  event.preventDefault()
+  const data = getFormFields(this)
+  console.log(api.showsTasks(data))
+  api.showsTasks(data)
+    .then(ui.showTaskSuccess)
+    .catch(ui.showTaskFailure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp).blur()
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
   $('#new-task').on('submit', addTask)
+  $('#show-tasks').on('submit', showTasks)
 }
 
 module.exports = {
