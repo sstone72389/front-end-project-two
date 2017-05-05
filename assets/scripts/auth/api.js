@@ -39,9 +39,22 @@ const signOut = () => {
   })
 }
 
+const addsTask = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: config.apiOrigin + '/tasks',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  addsTask
 }

@@ -71,6 +71,16 @@ const signOutFailure = () => {
   $('#signOutModal').modal('hide')
 }
 
+const addTaskSuccess = () => {
+  $('input').val('')
+  console.log('task added succesfuly')
+}
+
+const addTaskFailure = () => {
+  $('input').val('')
+  console.log('task add failure')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -80,5 +90,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutFailure,
-  signOutSuccess
+  signOutSuccess,
+  addTaskSuccess,
+  addTaskFailure
 }

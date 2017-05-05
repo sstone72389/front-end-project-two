@@ -16,7 +16,7 @@
 <body class="container-fluid">
   <nav>
     <button type="button" class="btn btn-transparent btn-lg hideOnSignIn left" data-toggle="modal" data-target="#signUpModal">Sign up</button>
-      <button type="button" class="btn btn-transparent btn-lg hideOnStart left" data-toggle="modal" data-target="#signOutModal">Sign out</button>
+    <button type="button" class="btn btn-transparent btn-lg hideOnStart left" data-toggle="modal" data-target="#signOutModal">Sign out</button>
     <h1 class="headline">Space - Out</h1>
     <button type="button" class="btn btn-transparent btn-lg hideOnSignInTwo right" data-toggle="modal" data-target="#signInModal">Sign in</button>
     <button type="button" class="btn btn-transparent btn-lg hideOnStartTwo right" data-toggle="modal" data-target="#changePasswordModal">Settings</button>
@@ -134,13 +134,19 @@
   <div class="container">
     <h2 class="iphoneFive">ADD TASKS HERE:</h2>
     <div class="center">
-      <form class="toDoList">
-        <input class="listInput" type="text" />
+      <form id="new-task">
+        <fieldset>
+          <input class="listInput" type="text" name="task[name]" placeholder="Enter Task Name Here">
+          <button id="button" class="btn btn-transparent-two" type="submit" name="submit"> Add Task </button>
+        </fieldset>
+      </form>
+      <!-- <form class="toDoList">
+        <input class="listInput" name="task[name]" type="text" placeholder="add to tasks">
       </form>
 
       <div id="button" class="btn btn-transparent-two">Add Item</div>
       <br/>
-      <ol class=listvals></ol>
+      <ol class=listvals></ol> -->
     </div>
   </div>
 
