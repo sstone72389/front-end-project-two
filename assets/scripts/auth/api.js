@@ -54,7 +54,7 @@ const addsTask = (data) => {
 const showsTasks = (data) => {
   console.log(data)
   return $.ajax({
-    url: config.apiOrigin + '/tasks',
+    url: config.apiOrigin + '/tasks/',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token

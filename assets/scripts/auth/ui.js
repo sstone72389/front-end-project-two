@@ -81,6 +81,24 @@ const addTaskFailure = () => {
   console.log('task add failure')
 }
 
+const showTaskSuccess = (response) => {
+  console.log(response.tasks[0].name)
+  console.log(response)
+  $('.UAtext').text(response.tasks[1].name)
+}
+
+// const showTaskSuccess = (response) => {
+//   for (let i = 0; i <= response.tasks.length; i++) {
+//     console.log(response.tasks[i].name)
+//     $('.UAtext').text(response.tasks[i].name)
+//   }
+// }
+
+const showTaskFailure = () => {
+  console.log('error showing tasks')
+  $('.UAtext').text('error showing tasks')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -92,5 +110,7 @@ module.exports = {
   signOutFailure,
   signOutSuccess,
   addTaskSuccess,
-  addTaskFailure
+  addTaskFailure,
+  showTaskSuccess,
+  showTaskFailure
 }

@@ -51,9 +51,7 @@ const addTask = function (event) {
 
 const showTasks = function (event) {
   event.preventDefault()
-  const data = getFormFields(this)
-  console.log(api.showsTasks(data))
-  api.showsTasks(data)
+  api.showsTasks()
     .then(ui.showTaskSuccess)
     .catch(ui.showTaskFailure)
 }
