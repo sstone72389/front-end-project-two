@@ -41,11 +41,20 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
+// const addTask = function (event) {
+//   const data = getFormFields(this)
+//   event.preventDefault()
+//   api.addTask(data)
+//     .then(ui.addTaskSuccess)
+//     .catch(ui.addTaskFailure)
+// }
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp).blur()
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
+  // $('#button').on('submit', addTask)
 }
 
 module.exports = {
