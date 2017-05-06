@@ -74,10 +74,9 @@ const onRemove = (data) => {
   })
 }
 
-// to be used for update once delete is fixed
-// const updateTask = (data) => {
+// const onUpdate = (data) => {
 //   return $.ajax({
-//     url: config.apiOrigin + '/tasks/' + data.item.id,
+//     url: config.apiOrigin + '/tasks/' + data.task.id,
 //     method: 'PATCH',
 //     headers: {
 //       'Authorization': 'Token token=' + store.user.token
@@ -93,6 +92,6 @@ module.exports = {
   signOut,
   addsTask,
   showsTasks,
-  // updateTask,
+  // onUpdate,
   onRemove
 }

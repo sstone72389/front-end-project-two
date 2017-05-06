@@ -134,15 +134,15 @@
   <div class="container">
     <h2 class="iphoneFive">ADD TASKS HERE:</h2>
     <div class="center">
+      <form id="show-tasks">
+        <fieldset>
+          <button class="btn btn-transparent-two" type="submit" name="submit"> Get Tasks </button>
+        </fieldset>
+      </form>
       <form id="new-task">
         <fieldset>
           <input class="listInput" type="text" name="task[name]">
           <button class="btn btn-transparent-two" type="submit" name="submit"> Add Task </button>
-        </fieldset>
-      </form>
-      <form id="show-tasks">
-        <fieldset>
-          <button class="btn btn-transparent-two" type="submit" name="submit"> Get Tasks </button>
         </fieldset>
       </form>
       <form id="remove-task">
@@ -151,6 +151,12 @@
           <button class="btn btn-transparent-two" type="submit" name="submit"> Remove Task </button>
         </fieldset>
       </form>
+      <!-- <form id="update-task">
+        <fieldset>
+          <input class="listInput" type="text" name="task[id]">
+          <button class="btn btn-transparent-two" type="submit" name="submit"> Mark Complete </button>
+        </fieldset>
+      </form> -->
     </div>
   </div>
   <footer>

@@ -101,9 +101,19 @@ const removeTaskSuccess = (response) => {
 }
 
 const removeTaskFailure = (response) => {
-  $('.UAtext').text('please enter valid task id')
+  $('.UAtext').text('Houston, we have a problem...')
   $('input').val('')
 }
+
+// const UpdateTaskSuccess = (response) => {
+//   $('.UAtext').text('Task marked complete')
+//   $('input').val('')
+// }
+//
+// const UpdateTaskFailure = (response) => {
+//   $('.UAtext').text('Houston, we have a problem...')
+//   $('input').val('')
+// }
 
 module.exports = {
   signUpSuccess,
@@ -120,5 +130,7 @@ module.exports = {
   showTaskSuccess,
   showTaskFailure,
   removeTaskSuccess,
-  removeTaskFailure
+  removeTaskFailure,
+  // UpdateTaskSuccess,
+  // UpdateTaskFailure
 }
