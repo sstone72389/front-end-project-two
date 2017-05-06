@@ -100,8 +100,8 @@ const removeTaskSuccess = (response) => {
   $('input').val('')
 }
 
-const removeTaskfailure = (response) => {
-  $('.UAtext').text('Removal Failure')
+const removeTaskFailure = (response) => {
+  $('.UAtext').text('please enter valid task id')
   $('input').val('')
 }
 
@@ -120,5 +120,5 @@ module.exports = {
   showTaskSuccess,
   showTaskFailure,
   removeTaskSuccess,
-  removeTaskfailure
+  removeTaskFailure
 }
