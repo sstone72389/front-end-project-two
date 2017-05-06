@@ -52,7 +52,6 @@ const addsTask = (data) => {
 }
 
 const showsTasks = (data) => {
-  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/tasks/',
     method: 'GET',
@@ -62,17 +61,30 @@ const showsTasks = (data) => {
     data
   })
 }
-const onRemove = (id) => {
-  console.log(id)
+
+const onRemove = (data) => {
+  console.log(data)
   return $.ajax({
-    url: config.apiOrigin + '/tasks/' + id,
+    url: config.apiOrigin + '/tasks/' + data.task.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    id
+    data: data
   })
 }
+
+// to be used for update once delete is fixed
+// const updateTask = (data) => {
+//   return $.ajax({
+//     url: config.apiOrigin + '/tasks/' + data.item.id,
+//     method: 'PATCH',
+//     headers: {
+//       'Authorization': 'Token token=' + store.user.token
+//     },
+//     data: data
+//   })
+// }
 
 module.exports = {
   signUp,
@@ -81,5 +93,6 @@ module.exports = {
   signOut,
   addsTask,
   showsTasks,
+  // updateTask,
   onRemove
 }

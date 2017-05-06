@@ -83,17 +83,12 @@ const addTaskFailure = () => {
 }
 
 const showTaskSuccess = (response) => {
-  console.log(response.tasks[0].name)
+  // console.log(response.tasks[0].name)
   console.log(response)
-  $('.UAtext').text(response.tasks[1].name)
-}
+  // $('.UAtext').text(response.tasks[1].name)
+  $('.UAtext').text('Fix me so I show all tasks!!!')
 
-// const showTaskSuccess = (response) => {
-//   for (let i = 0; i <= response.tasks.length; i++) {
-//     console.log(response.tasks[i].name)
-//     $('.UAtext').text(response.tasks[i].name)
-//   }
-// }
+}
 
 const showTaskFailure = () => {
   console.log('error showing tasks')
@@ -101,14 +96,15 @@ const showTaskFailure = () => {
 }
 
 const removeTaskSuccess = (response) => {
-  console.log(response)
   $('.UAtext').text('Removal Success')
+  $('input').val('')
 }
 
 const removeTaskfailure = (response) => {
-  console.log(response)
   $('.UAtext').text('Removal Failure')
+  $('input').val('')
 }
+
 module.exports = {
   signUpSuccess,
   signUpFailure,

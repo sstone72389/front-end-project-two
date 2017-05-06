@@ -64,6 +64,17 @@ const onRemoveTask = function (event) {
     .catch(ui.removeTaskFailure)
 }
 
+// possible delete correction from issue qeue??
+// const onDeleteEvent =(event) => {
+//   event.preventDefault();
+//   let data = getFormFields(event.target);
+//   console.log(data);
+//   let id = data.event.id;
+//   api.deleteEvent(id)
+//     .done(ui.deleteEventSuccess)
+//     .fail(ui.failure);
+// };
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp).blur()
   $('#sign-in').on('submit', onSignIn)
