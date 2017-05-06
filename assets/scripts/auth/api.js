@@ -62,6 +62,17 @@ const showsTasks = (data) => {
     data
   })
 }
+const onRemove = (id) => {
+  console.log(id)
+  return $.ajax({
+    url: config.apiOrigin + '/tasks/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    id
+  })
+}
 
 module.exports = {
   signUp,
@@ -69,5 +80,6 @@ module.exports = {
   changePassword,
   signOut,
   addsTask,
-  showsTasks
+  showsTasks,
+  onRemove
 }

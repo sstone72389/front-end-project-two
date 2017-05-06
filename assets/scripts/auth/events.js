@@ -56,6 +56,14 @@ const showTasks = function (event) {
     .catch(ui.showTaskFailure)
 }
 
+const onRemoveTask = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.onRemove(data)
+    .then(ui.removeTaskSuccess)
+    .catch(ui.removeTaskFailure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp).blur()
   $('#sign-in').on('submit', onSignIn)
@@ -63,6 +71,7 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#new-task').on('submit', addTask)
   $('#show-tasks').on('submit', showTasks)
+  $('#remove-task').on('submit', onRemoveTask)
 }
 
 module.exports = {

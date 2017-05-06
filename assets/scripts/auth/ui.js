@@ -100,6 +100,15 @@ const showTaskFailure = () => {
   $('.UAtext').text('error showing tasks')
 }
 
+const removeTaskSuccess = (response) => {
+  console.log(response)
+  $('.UAtext').text('Removal Success')
+}
+
+const removeTaskfailure = (response) => {
+  console.log(response)
+  $('.UAtext').text('Removal Failure')
+}
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -113,5 +122,7 @@ module.exports = {
   addTaskSuccess,
   addTaskFailure,
   showTaskSuccess,
-  showTaskFailure
+  showTaskFailure,
+  removeTaskSuccess,
+  removeTaskfailure
 }
