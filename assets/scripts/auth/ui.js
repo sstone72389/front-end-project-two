@@ -7,7 +7,7 @@ const signUpSuccess = (data) => {
 }
 
 const signUpFailure = () => {
-  $('.UAtext').text('Error Signing up!')
+  $('.UAtext').text('Houston, we have a problem...')
   $('#signUpModal').modal('hide')
   $('input').val('')
 }
@@ -29,13 +29,13 @@ const signInSuccess = (data) => {
 }
 
 const signInFailure = () => {
-  $('.UAtext').text('Sign in failure!')
+  $('.UAtext').text('Houston, we have a problem...')
   $('#signInModal').modal('hide')
   $('input').val('')
 }
 
 const autoSignInFailure = () => {
-  $('.UAtext').text('Sign in failure!')
+  $('.UAtext').text('Houston, we have a problem...')
   $('#signInModal').modal('hide')
   $('input').val('')
 }
@@ -47,7 +47,7 @@ const changePasswordSuccess = (data) => {
 }
 
 const changePasswordFailure = () => {
-  $('.UAtext').text('Error Changing Password!')
+  $('.UAtext').text('Houston, we have a problem...')
   $('#changePasswordModal').modal('hide')
   $('input').val('')
 }
@@ -67,18 +67,19 @@ const signOutSuccess = (data) => {
 }
 
 const signOutFailure = () => {
-  $('.UAtext').text('Sign out faulire!')
+  $('.UAtext').text('Houston, we have a problem...')
   $('#signOutModal').modal('hide')
 }
 
 const addTaskSuccess = () => {
   $('input').val('')
   console.log('task added succesfuly')
+  $('.UAtext').text('Keep Adding!!')
 }
 
 const addTaskFailure = () => {
   $('input').val('')
-  console.log('task add failure')
+  console.log('Houston, we have a problem...')
 }
 
 const showTaskSuccess = (response) => {
