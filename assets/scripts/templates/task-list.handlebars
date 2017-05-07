@@ -1,0 +1,20 @@
+{{#each tasks as |task|}}
+
+  <!-- {{> partial}}
+  Don't uncomment yet -->
+
+ <!-- Developers, why are we using data-id and not just id? -->
+  <ul data-id="{{task.id}}">
+    <div class="hideMe">
+    <li><small>Task Id: {{task.id}}</small></li>
+    {{#if task.name}}
+      <li>{{task.name}}</li>
+      <!-- <li><button class="remove">Remove</button> -->
+    {{else}}
+      <li>No task(s) to display.</li>
+      <!-- <li><button class="remove">Remove</button> -->
+    {{/if}}
+  </div>
+</ul>
+
+{{/each}}

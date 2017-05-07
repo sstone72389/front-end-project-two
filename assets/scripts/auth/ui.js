@@ -1,5 +1,6 @@
 'use strict'
 const store = require('../store.js')
+const showTasksTemplate = require('../templates/task-list.handlebars')
 
 const signUpSuccess = (data) => {
   $('#signUpModal').modal('hide')
@@ -14,7 +15,7 @@ const signUpFailure = () => {
 
 // add shows where applicable
 const signInSuccess = (data) => {
-  $('.UAtext').text("Don't forget to start your list.")
+  $('.UAtext').text("Don't forget to start your task list.")
   $('.container').show()
   $('.defText').hide()
   $('.hideOnStart').show()
@@ -53,7 +54,7 @@ const changePasswordFailure = () => {
 }
 
 const signOutSuccess = (data) => {
-  $('.UAtext').text("★ Dont't get caught spacing out. Sign in to get started! ★")
+  $('.UAtext').text("★Dont't get caught spacing out. Sign in to get started!★")
   $('.container').hide()
   $('.defText').show()
   $('.hideOnStart').hide()
@@ -88,7 +89,9 @@ const showTaskSuccess = (response) => {
   // console.log(response.tasks[0].name)
   console.log(response)
   // $('.UAtext').text(response.tasks[1].name)
-  $('.UAtext').text('Fix me so I show all tasks!!!')
+  const showTasksHtml = showTasksTemplate({ tasks: response.tasks })
+  $('.center').append(showTasksHtml)
+  $('.UAtext').text('Task List Launched!')
   $('#getTasksModal').modal('hide')
 }
 
