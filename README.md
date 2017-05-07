@@ -1,4 +1,5 @@
 link to live application: <https://sstone72389.github.io/front-end-project-two/>
+
 link to rails-api repo: <https://github.com/sstone72389/rails-api-project-two>
 
 Explanation of project: This application’s purpose is to provide a means of organization to the user. As per the title suggests: it is to help keep one on track in their day to day life. This will be achieved via user input and interaction with the app. A user will be able to monitor their day to tasks and use an interactive ‘reminders’ checklist to ensure they ‘did not forget’ a desired activity or action. Users will be able to manipulate the data that they input as desired.
