@@ -77,6 +77,7 @@ const addTaskSuccess = () => {
   console.log('task added succesfuly')
   $('.UAtext').text('Keep Adding!!')
   $('#newTaskModal').modal('hide')
+  $('.center').empty()
 }
 
 const addTaskFailure = () => {
@@ -91,12 +92,12 @@ const showTaskSuccess = (response) => {
   // $('.UAtext').text(response.tasks[1].name)
   const showTasksHtml = showTasksTemplate({ tasks: response.tasks })
   $('.center').append(showTasksHtml)
-  $('.UAtext').text('Task List Launched!')
+  $('.UAtext').text('Launch ahead of your day!')
   $('#getTasksModal').modal('hide')
 }
 
 const showTaskFailure = () => {
-  $('.UAtext').text('error showing tasks')
+  $('.UAtext').text('Houston, we have a problem...')
   $('#getTasksModal').modal('hide')
 }
 
@@ -104,6 +105,7 @@ const removeTaskSuccess = (response) => {
   $('.UAtext').text('Removal Success')
   $('input').val('')
   $('#removeTaskModal').modal('hide')
+  $('.center').empty()
 }
 
 const removeTaskFailure = (response) => {
@@ -116,6 +118,7 @@ const UpdateTaskSuccess = (response) => {
   $('.UAtext').text('Task Successfuly Updated')
   $('input').val('')
   $('#updateTaskModal').modal('hide')
+  $('.center').empty()
 }
 
 const UpdateTaskFailure = (response) => {

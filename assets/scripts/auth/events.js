@@ -22,6 +22,11 @@ const onSignIn = function (event) {
   event.preventDefault()
   api.signIn(data)
     .then(ui.signInSuccess)
+    .then(() => {
+      api.showsTasks(data)
+      .then(ui.showTaskSuccess)
+      .catch(ui.showTaskFailure)
+    })
     .catch(ui.signInFailure)
 }
 
@@ -46,6 +51,11 @@ const addTask = function (event) {
   const data = getFormFields(this)
   api.addsTask(data)
     .then(ui.addTaskSuccess)
+    .then(() => {
+      api.showsTasks(data)
+      .then(ui.showTaskSuccess)
+      .catch(ui.showTaskFailure)
+    })
     .catch(ui.addTaskFailure)
 }
 
@@ -61,6 +71,11 @@ const onRemoveTask = function (event) {
   event.preventDefault()
   api.onRemove(data)
     .then(ui.removeTaskSuccess)
+    .then(() => {
+      api.showsTasks(data)
+      .then(ui.showTaskSuccess)
+      .catch(ui.showTaskFailure)
+    })
     .catch(ui.removeTaskFailure)
 }
 
@@ -69,6 +84,11 @@ const onUpdateTask = function (event) {
   event.preventDefault()
   api.onUpdate(data)
     .then(ui.UpdateTaskSuccess)
+    .then(() => {
+      api.showsTasks(data)
+      .then(ui.showTaskSuccess)
+      .catch(ui.showTaskFailure)
+    })
     .catch(ui.UpdateTaskFailure)
 }
 
