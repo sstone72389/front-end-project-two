@@ -50,7 +50,7 @@ const changePasswordFailure = () => {
 }
 
 const signOutSuccess = (data) => {
-  $('.UAtext').text("★Dont't get caught spacing out. Sign in to get started!★")
+  $('.UAtext').text("Dont't get caught spacing out. Sign in to get started!")
   $('.container').hide()
   $('.defText').show()
   $('.hideOnStart').hide()

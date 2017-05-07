@@ -1,4 +1,5 @@
-// // startList to be exported and linked
+// to be used on refactor for reference
+// initial 'logic' for list
 // const startList = function () {
 // //   // const incompleteTasks = []
 // //   // const completeTasks = []
