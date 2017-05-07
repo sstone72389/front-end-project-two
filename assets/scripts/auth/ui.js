@@ -105,15 +105,15 @@ const removeTaskFailure = (response) => {
   $('input').val('')
 }
 
-// const UpdateTaskSuccess = (response) => {
-//   $('.UAtext').text('Task marked complete')
-//   $('input').val('')
-// }
-//
-// const UpdateTaskFailure = (response) => {
-//   $('.UAtext').text('Houston, we have a problem...')
-//   $('input').val('')
-// }
+const UpdateTaskSuccess = (response) => {
+  $('.UAtext').text('Task Successfuly Updated')
+  $('input').val('')
+}
+
+const UpdateTaskFailure = (response) => {
+  $('.UAtext').text('Houston, we have a problem...')
+  $('input').val('')
+}
 
 module.exports = {
   signUpSuccess,
@@ -131,6 +131,6 @@ module.exports = {
   showTaskFailure,
   removeTaskSuccess,
   removeTaskFailure,
-  // UpdateTaskSuccess,
-  // UpdateTaskFailure
+  UpdateTaskSuccess,
+  UpdateTaskFailure
 }

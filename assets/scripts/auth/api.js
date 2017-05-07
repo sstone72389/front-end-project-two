@@ -74,16 +74,17 @@ const onRemove = (data) => {
   })
 }
 
-// const onUpdate = (data) => {
-//   return $.ajax({
-//     url: config.apiOrigin + '/tasks/' + data.task.id,
-//     method: 'PATCH',
-//     headers: {
-//       'Authorization': 'Token token=' + store.user.token
-//     },
-//     data: data
-//   })
-// }
+const onUpdate = (data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/tasks/' + data.task.id,
+    method: 'PATCH',
+    controller: 'tasks',
+    headers: {
+      'Authorization': 'Token token=' + store.user.token
+    },
+    data
+  })
+}
 
 module.exports = {
   signUp,
@@ -92,6 +93,6 @@ module.exports = {
   signOut,
   addsTask,
   showsTasks,
-  // onUpdate,
+  onUpdate,
   onRemove
 }

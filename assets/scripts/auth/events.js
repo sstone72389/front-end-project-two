@@ -64,13 +64,13 @@ const onRemoveTask = function (event) {
     .catch(ui.removeTaskFailure)
 }
 
-// const onUpdateTask = function (event) {
-//   const data = getFormFields(this)
-//   event.preventDefault()
-//   api.onUpdate(data)
-//     .then(ui.UpdateTaskSuccess)
-//     .catch(ui.RemoveTaskFailure)
-// }
+const onUpdateTask = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.onUpdate(data)
+    .then(ui.UpdateTaskSuccess)
+    .catch(ui.UpdateTaskFailure)
+}
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp).blur()
@@ -80,7 +80,7 @@ const addHandlers = () => {
   $('#new-task').on('submit', addTask)
   $('#show-tasks').on('submit', showTasks)
   $('#remove-task').on('submit', onRemoveTask)
-  // $('#update-task').on('submit', onUpdateTask)
+  $('#update-task').on('submit', onUpdateTask)
 }
 
 module.exports = {
