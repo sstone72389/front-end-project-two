@@ -5,6 +5,7 @@ const showTasksTemplate = require('../templates/task-list.handlebars')
 const signUpSuccess = (data) => {
   $('#signUpModal').modal('hide')
   $('input').val('')
+  $('.center').empty()
 }
 
 const signUpFailure = () => {
@@ -24,18 +25,13 @@ const signInSuccess = (data) => {
   $('.hideOnSignInTwo').hide()
   $('#signInModal').modal('hide')
   $('input').val('')
+  $('.center').empty()
 
   // store the user object as per below
   store.user = data.user
 }
 
 const signInFailure = () => {
-  $('.UAtext').text('Houston, we have a problem...')
-  $('#signInModal').modal('hide')
-  $('input').val('')
-}
-
-const autoSignInFailure = () => {
   $('.UAtext').text('Houston, we have a problem...')
   $('#signInModal').modal('hide')
   $('input').val('')
@@ -74,8 +70,6 @@ const signOutFailure = () => {
 
 const addTaskSuccess = () => {
   $('input').val('')
-  console.log('task added succesfuly')
-  $('.UAtext').text('Keep Adding!!')
   $('#newTaskModal').modal('hide')
   $('.center').empty()
 }
@@ -87,12 +81,9 @@ const addTaskFailure = () => {
 }
 
 const showTaskSuccess = (response) => {
-  // console.log(response.tasks[0].name)
-  console.log(response)
-  // $('.UAtext').text(response.tasks[1].name)
   const showTasksHtml = showTasksTemplate({ tasks: response.tasks })
   $('.center').append(showTasksHtml)
-  $('.UAtext').text('Launch ahead of your day!')
+  $('.UAtext').text('Launch ahead with Space-Out!')
   $('#getTasksModal').modal('hide')
 }
 
@@ -102,7 +93,6 @@ const showTaskFailure = () => {
 }
 
 const removeTaskSuccess = (response) => {
-  $('.UAtext').text('Removal Success')
   $('input').val('')
   $('#removeTaskModal').modal('hide')
   $('.center').empty()
@@ -115,7 +105,6 @@ const removeTaskFailure = (response) => {
 }
 
 const UpdateTaskSuccess = (response) => {
-  $('.UAtext').text('Task Successfuly Updated')
   $('input').val('')
   $('#updateTaskModal').modal('hide')
   $('.center').empty()
@@ -130,7 +119,6 @@ const UpdateTaskFailure = (response) => {
 module.exports = {
   signUpSuccess,
   signUpFailure,
-  autoSignInFailure,
   signInSuccess,
   signInFailure,
   changePasswordSuccess,

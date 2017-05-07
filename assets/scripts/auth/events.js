@@ -4,6 +4,7 @@ const getFormFields = require(`../../../lib/get-form-fields`)
 const api = require('./api')
 const ui = require('./ui')
 
+// chains sign in to allow auto-sign in functionality
 const onSignUp = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
@@ -17,6 +18,7 @@ const onSignUp = function (event) {
     .catch(ui.signUpFailure)
 }
 
+// chains showTask to allow list at all times
 const onSignIn = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
@@ -46,6 +48,14 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
+const showTasks = function (event) {
+  event.preventDefault()
+  api.showsTasks()
+    .then(ui.showTaskSuccess)
+    .catch(ui.showTaskFailure)
+}
+
+// chains showTask to allow list at all times
 const addTask = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
@@ -59,13 +69,7 @@ const addTask = function (event) {
     .catch(ui.addTaskFailure)
 }
 
-const showTasks = function (event) {
-  event.preventDefault()
-  api.showsTasks()
-    .then(ui.showTaskSuccess)
-    .catch(ui.showTaskFailure)
-}
-
+// chains showTask to allow list at all times
 const onRemoveTask = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
@@ -79,6 +83,7 @@ const onRemoveTask = function (event) {
     .catch(ui.removeTaskFailure)
 }
 
+// chains showTask to allow list at all times
 const onUpdateTask = function (event) {
   const data = getFormFields(this)
   event.preventDefault()

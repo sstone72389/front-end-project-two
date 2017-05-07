@@ -40,7 +40,6 @@ const signOut = () => {
 }
 
 const addsTask = (data) => {
-  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/tasks',
     method: 'POST',
@@ -63,7 +62,6 @@ const showsTasks = (data) => {
 }
 
 const onRemove = (data) => {
-  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/tasks/' + data.task.id,
     method: 'DELETE',

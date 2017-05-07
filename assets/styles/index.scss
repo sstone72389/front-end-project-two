@@ -1,6 +1,12 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+body {
+  background-attachment: fixed;
+  background-image: url('http://res.cloudinary.com/dfu4pwocw/image/upload/v1493251336/bkBjWxa-starry-sky-background_utu895.jpg');
+  background-repeat: no-repeat;
+}
+
 .hideOnStart,
 .hideOnStartTwo {
   display: none;
@@ -109,12 +115,6 @@ main {
   // background-color: rgba(255, 225, 255, .2);
 }
 
-body {
-  background-attachment: fixed;
-  background-image: url('http://res.cloudinary.com/dfu4pwocw/image/upload/v1493251336/bkBjWxa-starry-sky-background_utu895.jpg');
-  background-repeat: no-repeat;
-}
-
 h1 {
   color: rgba(23, 23, 155, .8);
   font-weight: 900;
@@ -174,16 +174,17 @@ input {
   border-radius: 5px;
 }
 
-.listDesc {
-  color: #0D2CA0;
-  font-family: 'Patrick Hand', cursive;
-  font-size: 20px;
-  text-align: center;
-}
-
-.toDoList {
-  display: inline-block;
-}
+// remove????
+// .listDesc {
+//   color: #0D2CA0;
+//   font-family: 'Patrick Hand', cursive;
+//   font-size: 20px;
+//   text-align: center;
+// }
+//
+// .toDoList {
+//   display: inline-block;
+// }
 
 .listInput {
   text-align: left;
@@ -222,6 +223,7 @@ ul li:nth-child(even) {
   opacity: .7;
 }
 
+// to be used for animation on refactor
 // .strike {
 //   text-decoration: line-through;
 // }
@@ -289,10 +291,6 @@ footer {
     height: 46px;
   }
 
-  // .container {
-  //   width: 340px;
-  // }
-
   .container-fluid {
     width: 375px;
   }
@@ -312,10 +310,6 @@ footer {
     width: 100%;
     height: 44px;
   }
-
-  // .container {
-  //   width: 330px;
-  // }
 
   .container-fluid {
     width: 345px;
@@ -340,10 +334,6 @@ footer {
     width: 100%;
     height: 42px;
   }
-
-  // .container {
-  //   width: 310px;
-  // }
 
   .container-fluid {
     width: 315px;
