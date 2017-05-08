@@ -12,8 +12,8 @@ const onSignUp = function (event) {
     .then(ui.signUpSuccess)
     .then(() => {
       api.signIn(data)
-      .then(ui.signInSuccess)
-      .catch(ui.signInFailure)
+        .then(ui.signInSuccess)
+        .catch(ui.signInFailure)
     })
     .catch(ui.signUpFailure)
 }
@@ -26,8 +26,8 @@ const onSignIn = function (event) {
     .then(ui.signInSuccess)
     .then(() => {
       api.showsTasks(data)
-      .then(ui.showTaskSuccess)
-      .catch(ui.showTaskFailure)
+        .then(ui.showTaskSuccess)
+        .catch(ui.showTaskFailure)
     })
     .catch(ui.signInFailure)
 }
@@ -36,8 +36,8 @@ const onChangePassword = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
   api.changePassword(data)
-      .then(ui.changePasswordSuccess)
-      .catch(ui.changePasswordFailure)
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordFailure)
 }
 
 const onSignOut = function (event) {
@@ -59,31 +59,21 @@ const showTasks = function (event) {
 const addTask = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
-  api.addsTask(data)
-    .then(ui.addTaskSuccess)
-    .then(() => {
-      api.showsTasks(data)
-      .then(ui.showTaskSuccess)
-      .catch(ui.showTaskFailure)
-    })
-    .catch(ui.addTaskFailure)
+  if (data.task.name.length >= 1) {
+    api.addsTask(data)
+      .then(ui.addTaskSuccess)
+      .then(() => {
+        api.showsTasks(data)
+          .then(ui.showTaskSuccess)
+          .catch(ui.showTaskFailure)
+      })
+      .catch(ui.addTaskFailure)
+  } else {
+    $('.UAtext').text('Houston, please enter a valid task...')
+    $('input').val('')
+    $('#newTaskModal').modal('hide')
+  }
 }
-
-// no longer needed, as a remove button was inserted into handlebars
-// with same functionality
-// chains showTask to allow list at all times
-// const onRemoveTask = function (event) {
-//   const data = getFormFields(this)
-//   event.preventDefault()
-//   api.onRemove(data)
-//     .then(ui.removeTaskSuccess)
-//     .then(() => {
-//       api.showsTasks(data)
-//       .then(ui.showTaskSuccess)
-//       .catch(ui.showTaskFailure)
-//     })
-//     .catch(ui.removeTaskFailure)
-// }
 
 // chains showTask to allow list at all times
 const onUpdateTask = function (event) {
@@ -93,8 +83,8 @@ const onUpdateTask = function (event) {
     .then(ui.UpdateTaskSuccess)
     .then(() => {
       api.showsTasks(data)
-      .then(ui.showTaskSuccess)
-      .catch(ui.showTaskFailure)
+        .then(ui.showTaskSuccess)
+        .catch(ui.showTaskFailure)
     })
     .catch(ui.UpdateTaskFailure)
 }
@@ -106,7 +96,6 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#new-task').on('submit', addTask)
   $('#show-tasks').on('submit', showTasks)
-  // $('#remove-task').on('submit', onRemoveTask)
   $('#update-task').on('submit', onUpdateTask)
 }
 

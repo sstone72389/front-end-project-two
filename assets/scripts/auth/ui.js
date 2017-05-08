@@ -11,7 +11,7 @@ const signUpSuccess = (data) => {
 }
 
 const signUpFailure = () => {
-  $('.UAtext').text('Houston, we have a problem...')
+  $('.UAtext').text('Houston, we have a problem...errr sign-up failure')
   $('#signUpModal').modal('hide')
   $('input').val('')
 }
@@ -34,7 +34,7 @@ const signInSuccess = (data) => {
 }
 
 const signInFailure = () => {
-  $('.UAtext').text('Houston, we have a problem...')
+  $('.UAtext').text('Houston, we have a problem...errr sign-in failure')
   $('#signInModal').modal('hide')
   $('input').val('')
 }
@@ -46,7 +46,7 @@ const changePasswordSuccess = (data) => {
 }
 
 const changePasswordFailure = () => {
-  $('.UAtext').text('Houston, we have a problem...')
+  $('.UAtext').text('Houston, we have a problem...failure changing password')
   $('#changePasswordModal').modal('hide')
   $('input').val('')
 }
@@ -66,7 +66,7 @@ const signOutSuccess = (data) => {
 }
 
 const signOutFailure = () => {
-  $('.UAtext').text('Houston, we have a problem...')
+  $('.UAtext').text('Houston, we have a problem...errr sign-out failure')
   $('#signOutModal').modal('hide')
 }
 
@@ -79,7 +79,7 @@ const addTaskSuccess = () => {
 const addTaskFailure = () => {
   $('input').val('')
   $('#newTaskModal').modal('hide')
-  $('.UAtext').text('Houston, we have a problem...')
+  $('.UAtext').text('Houston, we have a problem...failure adding task')
 }
 
 const onRemoveId = (event) => {
@@ -119,7 +119,7 @@ const showTaskSuccess = (response) => {
 }
 
 const showTaskFailure = () => {
-  $('.UAtext').text('Houston, we have a problem...')
+  $('.UAtext').text('Houston, we have a problem... cannot show tasks')
   $('#getTasksModal').modal('hide')
 }
 
@@ -130,7 +130,7 @@ const removeTaskSuccess = (response) => {
 }
 
 const removeTaskFailure = (response) => {
-  $('.UAtext').text('Houston, we have a problem...')
+  $('.UAtext').text('Houston, we have a problem...failure removing task')
   $('input').val('')
   $('#removeTaskModal').modal('hide')
 }
@@ -142,7 +142,7 @@ const UpdateTaskSuccess = (response) => {
 }
 
 const UpdateTaskFailure = (response) => {
-  $('.UAtext').text('Houston, we have a problem...')
+  $('.UAtext').text('Houston, we have a problem... cannot update task')
   $('input').val('')
   $('#updateTaskModal').modal('hide')
 }
