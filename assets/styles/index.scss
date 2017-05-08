@@ -3,7 +3,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 body {
   background-attachment: fixed;
-  background-image: url('http://res.cloudinary.com/dfu4pwocw/image/upload/v1493251336/bkBjWxa-starry-sky-background_utu895.jpg');
+  background-image: url('http://res.cloudinary.com/dfu4pwocw/image/upload/v1494266481/blue-space-wallpaper-2_1_so2mde.jpg');
   background-repeat: no-repeat;
 }
 
@@ -48,7 +48,7 @@ main {
 
 .btn-transparent {
   background: transparent;
-  color: rgba(23, 23, 155, .8);
+  color: rgba(0, 0, 102, .8);
   font-weight: 600;
   -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
   -moz-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
@@ -60,7 +60,7 @@ main {
 .btn-transparent:focus {
   background: transparent;
   outline: none;
-  color: rgba(23, 23, 155, .8);
+  color: rgba(0, 0, 102, .8);
 }
 
 .btn-transparent:hover {
@@ -94,7 +94,7 @@ main {
 .btn-transparent-three {
   background: transparent;
   // border: 2px solid rgba(255, 225, 255, .1);
-  color: rgba(23, 23, 155, .8);
+  color: rgba(0, 0, 102, .8);
   font-size: 18px;
   font-weight: 900;
   -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
@@ -107,7 +107,7 @@ main {
 .btn-transparent-three:focus {
   background: transparent;
   outline: none;
-  color: rgba(23, 23, 155, .8);
+  color: rgba(0, 0, 102, .8);
 }
 
 .btn-transparent-three:hover {
@@ -115,8 +115,32 @@ main {
   // background-color: rgba(255, 225, 255, .2);
 }
 
+.btn-transparent-four {
+  background: transparent;
+  // border: 2px solid rgba(255, 225, 255, .1);
+  color: rgba(255, 255, 255, .5);
+  font-size: 13px;
+  font-weight: 900;
+  -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  -webkit-transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.btn-transparent-four:focus {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, .5);
+}
+
+.btn-transparent-four:hover {
+  color: rgba(255, 255, 255, .9);
+  // background-color: rgba(255, 225, 255, .2);
+}
+
 h1 {
-  color: rgba(23, 23, 155, .8);
+  color: rgba(0, 0, 102, .8);
   font-weight: 900;
   font-family: 'Bungee', cursive;
   font-size: 28px;
@@ -136,7 +160,7 @@ h2 {
 }
 
 h4 {
-  color: rgba(23, 23, 155, .8);
+  color: rgba(0, 0, 102, .8);
   font-size: 24px;
   font-weight: bold;
 }
@@ -174,18 +198,6 @@ input {
   border-radius: 5px;
 }
 
-// remove????
-// .listDesc {
-//   color: #0D2CA0;
-//   font-family: 'Patrick Hand', cursive;
-//   font-size: 20px;
-//   text-align: center;
-// }
-//
-// .toDoList {
-//   display: inline-block;
-// }
-
 .listInput {
   text-align: left;
   padding: 4px 15px 4px 5px;
@@ -210,17 +222,19 @@ ul {
 
 li {
   color: white;
+  font-size: 21px;
 }
 
 ul li {
   padding: 5px;
-  color: darkblue;
-  opacity: .7;
+  color: rgba(255, 255, 255, .9);
+  opacity: .8;
 }
 
 ul li:nth-child(even) {
-  color: white;
-  opacity: .7;
+  font-size: 21px;
+  color: rgba(255, 235, 57, .7);
+  opacity: .8;
 }
 
 // to be used for animation on refactor
@@ -243,7 +257,7 @@ footer {
 }
 
 .footer {
-  color: darkblue;
+  color: rgba(0, 0, 102, .8);
   font-family: 'Patrick Hand SC', cursive;
   font-size: 20px;
   text-align: center;

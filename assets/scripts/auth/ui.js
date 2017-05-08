@@ -83,7 +83,6 @@ const addTaskFailure = () => {
 
 const onRemoveId = (event) => {
   const findId = $(event.target).attr('data-id')
-  console.log(findId)
   api.onRemoveById(findId)
     .then(removeTaskSuccess)
   .then(() => {

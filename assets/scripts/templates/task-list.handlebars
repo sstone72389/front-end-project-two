@@ -8,7 +8,10 @@
     <div class="hideMe">
     <li><small>Task Id: {{task.id}}</small></li>
     {{#if task.name}}
-      <li>{{task.name}} <button class="remove-task-button btn btn-transparent-three" data-id="{{task.id}}">x</button></li>
+    <li>{{task.name}} <button class="remove-task-button btn btn-transparent-four" data-id="{{task.id}}">DELETE</button></li>
+      <!-- <li><button class="remove">Remove</button> -->
+    {{else}}
+      <li>No task Name Entered <button class="remove-task-button btn btn-transparent-four" data-id="{{task.id}}">DELETE</button></li>
       <!-- <li><button class="remove">Remove</button> -->
     {{/if}}
   </div>
