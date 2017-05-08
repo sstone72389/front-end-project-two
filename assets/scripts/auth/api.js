@@ -95,6 +95,19 @@ const onUpdate = (data) => {
   })
 }
 
+// const onUpdateById = (data, findId) => {
+//   // console.log(data + 'PATCH TEST DATA')
+//   event.preventDefault()
+//   return $.ajax({
+//     url: config.apiOrigin + '/tasks/' + findId,
+//     method: 'PATCH',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data
+//   })
+// }
+
 module.exports = {
   signUp,
   signIn,
@@ -105,4 +118,5 @@ module.exports = {
   onUpdate,
   // onRemove,
   onRemoveById
+  // onUpdateById
 }

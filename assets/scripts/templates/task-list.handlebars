@@ -1,19 +1,25 @@
 {{#each tasks as |task|}}
 
-  <!-- {{> partial}}
-  Don't uncomment yet -->
+  <!-- {{> partial}} -->
 
- <!-- Developers, why are we using data-id and not just id? -->
   <ul data-id="{{task.id}}">
     <div class="hideMe">
     <li><small>Task Id: {{task.id}}</small></li>
     {{#if task.name}}
-    <li>{{task.name}} <button class="remove-task-button btn btn-transparent-four" data-id="{{task.id}}">DELETE</button></li>
-      <!-- <li><button class="remove">Remove</button> -->
+    <li>{{task.name}}
+      <!-- <button class="edit-task-button btn btn-transparent-four" data-id="{{task.id}}">EDIT</button> -->
+      <button class="remove-task-button btn btn-transparent-four" data-id="{{task.id}}">DELETE</button></li>
     {{else}}
-      <li>No task Name Entered <button class="remove-task-button btn btn-transparent-four" data-id="{{task.id}}">DELETE</button></li>
-      <!-- <li><button class="remove">Remove</button> -->
+      <li>No task Name Entered
+        <!-- <button class="edit-task-button btn btn-transparent-four" data-id="{{task.id}}">EDIT</button> -->
+        <button class="remove-task-button btn btn-transparent-four" data-id="{{task.id}}">DELETE</button></li>
     {{/if}}
+    <!-- <form id="edit-task-button">
+      <fieldset>
+        <input class="listInput" type="text" name="task[name]" placeholder="new task name">
+        <button class="btn btn-transparent-four" type="submit" name="submit">EDIT</button>
+      </fieldset>
+    </form> -->
   </div>
 </ul>
 

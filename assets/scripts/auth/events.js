@@ -69,6 +69,8 @@ const addTask = function (event) {
     .catch(ui.addTaskFailure)
 }
 
+// no longer needed, as a remove button was inserted into handlebars
+// with same functionality
 // chains showTask to allow list at all times
 // const onRemoveTask = function (event) {
 //   const data = getFormFields(this)

@@ -2,6 +2,7 @@
 const store = require('../store.js')
 const showTasksTemplate = require('../templates/task-list.handlebars')
 const api = require('./api.js')
+// const getFormFields = require(`../../../lib/get-form-fields`)
 
 const signUpSuccess = (data) => {
   $('#signUpModal').modal('hide')
@@ -93,12 +94,28 @@ const onRemoveId = (event) => {
   .catch(removeTaskFailure)
 }
 
+// const onUpdateId = (event) => {
+//   event.preventDefault()
+//   const data = getFormFields(event.target)
+//   const findId = $(event.target).attr('data-id')
+//   console.log(findId)
+//   api.onUpdateById(data, findId)
+//     .then(UpdateTaskSuccess)
+  // .then(() => {
+  //   api.showsTasks()
+  //   .then(showTaskSuccess)
+  //   .catch(showTaskFailure)
+  // })
+  // .catch(UpdateTaskFailure)
+// }
+
 const showTaskSuccess = (response) => {
   const showTasksHtml = showTasksTemplate({ tasks: response.tasks })
   $('.center').append(showTasksHtml)
   $('.UAtext').text('Launch ahead with Space-Out!')
   $('#getTasksModal').modal('hide')
   $('.remove-task-button').on('click', onRemoveId)
+  // $('.edit-task-button').on('click', onUpdateId)
 }
 
 const showTaskFailure = () => {
@@ -148,4 +165,5 @@ module.exports = {
   UpdateTaskSuccess,
   UpdateTaskFailure,
   onRemoveId
+  // onUpdateId
 }
