@@ -1,6 +1,7 @@
 'use strict'
 const store = require('../store.js')
 const showTasksTemplate = require('../templates/task-list.handlebars')
+const api = require('./api.js')
 
 const signUpSuccess = (data) => {
   $('#signUpModal').modal('hide')
@@ -80,11 +81,25 @@ const addTaskFailure = () => {
   $('.UAtext').text('Houston, we have a problem...')
 }
 
+const onRemoveId = (event) => {
+  const findId = $(event.target).attr('data-id')
+  console.log(findId)
+  api.onRemoveById(findId)
+    .then(removeTaskSuccess)
+  .then(() => {
+    api.showsTasks()
+    .then(showTaskSuccess)
+    .catch(showTaskFailure)
+  })
+  .catch(removeTaskFailure)
+}
+
 const showTaskSuccess = (response) => {
   const showTasksHtml = showTasksTemplate({ tasks: response.tasks })
   $('.center').append(showTasksHtml)
   $('.UAtext').text('Launch ahead with Space-Out!')
   $('#getTasksModal').modal('hide')
+  $('.remove-task-button').on('click', onRemoveId)
 }
 
 const showTaskFailure = () => {
@@ -132,5 +147,6 @@ module.exports = {
   removeTaskSuccess,
   removeTaskFailure,
   UpdateTaskSuccess,
-  UpdateTaskFailure
+  UpdateTaskFailure,
+  onRemoveId
 }

@@ -70,18 +70,18 @@ const addTask = function (event) {
 }
 
 // chains showTask to allow list at all times
-const onRemoveTask = function (event) {
-  const data = getFormFields(this)
-  event.preventDefault()
-  api.onRemove(data)
-    .then(ui.removeTaskSuccess)
-    .then(() => {
-      api.showsTasks(data)
-      .then(ui.showTaskSuccess)
-      .catch(ui.showTaskFailure)
-    })
-    .catch(ui.removeTaskFailure)
-}
+// const onRemoveTask = function (event) {
+//   const data = getFormFields(this)
+//   event.preventDefault()
+//   api.onRemove(data)
+//     .then(ui.removeTaskSuccess)
+//     .then(() => {
+//       api.showsTasks(data)
+//       .then(ui.showTaskSuccess)
+//       .catch(ui.showTaskFailure)
+//     })
+//     .catch(ui.removeTaskFailure)
+// }
 
 // chains showTask to allow list at all times
 const onUpdateTask = function (event) {
@@ -104,7 +104,7 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#new-task').on('submit', addTask)
   $('#show-tasks').on('submit', showTasks)
-  $('#remove-task').on('submit', onRemoveTask)
+  // $('#remove-task').on('submit', onRemoveTask)
   $('#update-task').on('submit', onUpdateTask)
 }
 

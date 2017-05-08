@@ -61,9 +61,20 @@ const showsTasks = (data) => {
   })
 }
 
-const onRemove = (data) => {
+// const onRemove = (data) => {
+//   return $.ajax({
+//     url: config.apiOrigin + '/tasks/' + data.task.id,
+//     method: 'DELETE',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data: data
+//   })
+// }
+
+const onRemoveById = (data) => {
   return $.ajax({
-    url: config.apiOrigin + '/tasks/' + data.task.id,
+    url: config.apiOrigin + '/tasks/' + data,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -92,5 +103,6 @@ module.exports = {
   addsTask,
   showsTasks,
   onUpdate,
-  onRemove
+  // onRemove,
+  onRemoveById
 }
