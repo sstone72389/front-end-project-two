@@ -72,7 +72,6 @@ const addTask = function (event) {
   } else {
     $('.UAtext').text('Houston, please enter a valid task...')
     $('input').val('')
-    $('#newTaskModal').modal('hide')
   }
 }
 

@@ -72,13 +72,11 @@ const signOutFailure = () => {
 
 const addTaskSuccess = () => {
   $('input').val('')
-  $('#newTaskModal').modal('hide')
   $('.center').empty()
 }
 
 const addTaskFailure = () => {
   $('input').val('')
-  $('#newTaskModal').modal('hide')
   $('.UAtext').text('Houston, we have a problem...failure adding task')
 }
 
@@ -109,26 +107,22 @@ const showTaskSuccess = (response) => {
   const showTasksHtml = showTasksTemplate({ tasks: response.tasks })
   $('.center').append(showTasksHtml)
   $('.UAtext').text('Launch ahead with Space-Out!')
-  $('#getTasksModal').modal('hide')
   $('.remove-task-button').on('click', onRemoveId)
   $('.edit-task-button').on('click', onUpdateId)
 }
 
 const showTaskFailure = () => {
   $('.UAtext').text('Houston, we have a problem... cannot show tasks')
-  $('#getTasksModal').modal('hide')
 }
 
 const removeTaskSuccess = (response) => {
   $('input').val('')
-  $('#removeTaskModal').modal('hide')
   $('.center').empty()
 }
 
 const removeTaskFailure = (response) => {
   $('.UAtext').text('Houston, we have a problem...failure removing task')
   $('input').val('')
-  $('#removeTaskModal').modal('hide')
 }
 
 const UpdateTaskSuccess = (response) => {
