@@ -101,7 +101,6 @@ const onUpdateId = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
   const findId = $(event.target).attr('data-id')
-  console.log(findId)
   store.currentId = findId
 }
 
