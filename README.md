@@ -6,9 +6,9 @@ Explanation of project: This application’s purpose is to provide a means of or
 
 How it works: This app uses a rails back-end to store data and communicate with the front -end/client-side (see link to rails-api repo for further information). The front-end is composed of JS, HTML, CSS (including SASS and bootstrap). It also utilizes handlebars to display data in a readable format to the client.
 
-Approach taken when building: Planning was key, here. I started by creating wireframes and user stories. The next step for me was to build a basic HTML/CSS template that will provide a responsive user experience. From there, the next step was to build the back-end so and test via CURL scripts to ensure functionality. Once confirmed, I was able to move to the fron end and create proper user interactions.
+Approach taken when building: Planning was key, here. I started by creating wireframes and user stories. The next step for me was to build a basic HTML/CSS template that will provide a responsive user experience. From there, the next step was to build the back-end so and test via CURL scripts to ensure functionality. Once confirmed, I was able to move to the front end and create proper user interactions.
 
-Unsolved problems: I would like this app to look more like a 'reminders' list. That said, I would like to incorporate animations/applicable buttons and JS to allow for a smoother user experience. Not using ID's for editing and removal is my main priority on refactor.
+Unsolved problems: I would like this app to look more like a 'reminders' list. I would like to able to toggle "complete/incomplete" with an animated strike through. 
 
 User Stories:
 
