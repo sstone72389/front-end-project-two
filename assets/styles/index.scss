@@ -199,12 +199,14 @@ input {
   border-radius: 5px;
 }
 
+// remove????
 .listInput {
   text-align: left;
   padding: 4px 15px 4px 5px;
   opacity: 0.3;
 }
 
+// remove????
 .listInputTwo {
   text-align: left;
   padding: 4px 15px 4px 5px;
@@ -213,7 +215,6 @@ input {
 
 ul {
   padding-left: 20px;
-  // font-family: 'Bungee Hairline', cursive;
   font-weight: 900;
   font-size: 24px;
   text-align: center;
@@ -222,21 +223,17 @@ ul {
 }
 
 li {
-  color: white;
-  font-size: 21px;
-}
-
-ul li {
-  padding: 5px;
-  color: rgba(255, 255, 255, .9);
-  opacity: .8;
-}
-
-ul li:nth-child(even) {
-  font-size: 21px;
   color: rgba(255, 235, 57, .7);
   opacity: .8;
 }
+
+ul li {
+  font-size: 24px;
+  padding: 5px;
+  color: rgba(255, 235, 57, .7);
+  opacity: .8;
+}
+
 
 // to be used for animation on refactor
 // .strike {
@@ -273,6 +270,10 @@ footer {
   p {
     font-size: 16px;
   }
+  ul li {
+    font-size: 18px;
+  }
+
   li {
     font-size: 18px;
   }
@@ -286,8 +287,13 @@ footer {
   p {
     font-size: 15px;
   }
+
+  ul li {
+    font-size: 16px;
+  }
+
   li {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 @media only screen and (max-device-width : 414px) {
@@ -306,12 +312,13 @@ footer {
     height: 46px;
   }
 
-  ul li:nth-child(even) {
+  li {
     font-size: 15px;
+    width: 100%;
   }
 
-  li {
-    width: 100%;
+  ul li {
+    font-size: 15px;
   }
 
   h2.UAtext {
@@ -350,12 +357,13 @@ footer {
     height: 44px;
   }
 
-  ul li:nth-child(even) {
+  li {
     font-size: 15px;
+    width: 100%;
   }
 
-  li {
-    width: 100%;
+  ul li {
+    font-size: 15px;
   }
 
   h2.UAtext {
@@ -389,21 +397,18 @@ footer {
     opacity: 1;
   }
 
-  li {
-    font-size: 10px;
-  }
-
   nav {
     width: 100%;
     height: 42px;
   }
 
-  ul li:nth-child(even) {
+  li {
     font-size: 14px;
+    width: 100%;
   }
 
-  li {
-    width: 100%;
+  ul li {
+    font-size: 14px;
   }
 
   h2.UAtext {

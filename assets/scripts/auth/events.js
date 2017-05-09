@@ -3,6 +3,7 @@
 const getFormFields = require(`../../../lib/get-form-fields`)
 const api = require('./api')
 const ui = require('./ui')
+const store = require('../store.js')
 
 // chains sign in to allow auto-sign in functionality
 const onSignUp = function (event) {
@@ -76,10 +77,13 @@ const addTask = function (event) {
 }
 
 // chains showTask to allow list at all times
+// uses store to store the data-id of the task clicked
+// is passed to the api as such:
 const onUpdateTask = function (event) {
   const data = getFormFields(this)
+  const currentId = store.currentId
   event.preventDefault()
-  api.onUpdate(data)
+  api.onUpdateById(data, currentId)
     .then(ui.UpdateTaskSuccess)
     .then(() => {
       api.showsTasks(data)
