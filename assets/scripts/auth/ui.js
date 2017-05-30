@@ -105,7 +105,7 @@ const onUpdateId = (event) => {
 // edit task button launches the above code
 const showTaskSuccess = (response) => {
   const showTasksHtml = showTasksTemplate({ tasks: response.tasks })
-  $('.center').append(showTasksHtml)
+  $('.center').html(showTasksHtml)
   $('.UAtext').text('Launch ahead with Space-Out!')
   $('.remove-task-button').on('click', onRemoveId)
   $('.edit-task-button').on('click', onUpdateId)
@@ -117,7 +117,7 @@ const showTaskFailure = () => {
 
 const removeTaskSuccess = (response) => {
   $('input').val('')
-  $('.center').empty()
+  // $('.center').empty()
 }
 
 const removeTaskFailure = (response) => {
@@ -128,7 +128,7 @@ const removeTaskFailure = (response) => {
 const UpdateTaskSuccess = (response) => {
   $('input').val('')
   $('#updateTaskModal').modal('hide')
-  $('.center').empty()
+  // $('.center').empty()
 }
 
 const UpdateTaskFailure = (response) => {
