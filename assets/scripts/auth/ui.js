@@ -72,7 +72,6 @@ const signOutFailure = () => {
 
 const addTaskSuccess = () => {
   $('input').val('')
-  $('.center').empty()
 }
 
 const addTaskFailure = () => {
