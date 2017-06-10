@@ -46,7 +46,7 @@ const changePasswordSuccess = (data) => {
 }
 
 const changePasswordFailure = () => {
-  $('#password-succ').text('Houston, we have a problem...failure changing password').fadeIn().delay(2000).fadeOut('slow')
+  $('#password-succ').text('Failure changing password').fadeIn().delay(2000).fadeOut('slow')
   $('#changePasswordModal').modal('hide')
   $('input').val('')
 }
