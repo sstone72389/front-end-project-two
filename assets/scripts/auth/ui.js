@@ -40,13 +40,13 @@ const signInFailure = () => {
 }
 
 const changePasswordSuccess = (data) => {
-  $('.UAtext').text('Password Changed').fadeIn().delay(2000).fadeOut('slow')
+  $('#password-succ').text('Password Changed').fadeIn().delay(2000).fadeOut('slow')
   $('#changePasswordModal').modal('hide')
   $('input').val('')
 }
 
 const changePasswordFailure = () => {
-  $('.UAtext').text('Houston, we have a problem...failure changing password').fadeIn().delay(2000).fadeOut('slow')
+  $('#password-succ').text('Houston, we have a problem...failure changing password').fadeIn().delay(2000).fadeOut('slow')
   $('#changePasswordModal').modal('hide')
   $('input').val('')
 }
