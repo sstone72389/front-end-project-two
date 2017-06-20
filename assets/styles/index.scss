@@ -29,7 +29,6 @@ nav {
 main {
   text-align: center;
 }
-
 // make modal clear!!!
 .modal-body,
 .modal-content,
@@ -40,10 +39,12 @@ main {
 }
 
 .left {
+  width: 12%;
   float: left;
 }
 
 .right {
+  width: 12%;
   float: right;
 }
 
@@ -145,7 +146,7 @@ h1 {
   font-weight: 900;
   font-family: 'Bungee', cursive;
   font-size: 28px;
-  margin-left: 34%;
+  width: 76%;
   margin-top: 10px;
   text-align: center;
   float: left;
@@ -182,7 +183,7 @@ p {
   font-size: 17px;
   line-height: 44px;
   text-align: center;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 p.defText {
@@ -215,7 +216,6 @@ input {
   background: transparent;
   border-radius: 5px;
 }
-
 // remove????
 .listInput {
   text-align: left;
@@ -223,7 +223,6 @@ input {
   opacity: 0.3;
   font-size: 16px;
 }
-
 // remove????
 .listInputTwo {
   text-align: left;
@@ -243,17 +242,15 @@ ul {
 
 li {
   color: rgba(255, 235, 57, .7);
-  opacity: .8;
+  opacity: 0.8;
 }
 
 ul li {
   font-size: 24px;
   padding: 5px;
   color: rgba(255, 235, 57, .7);
-  opacity: .8;
+  opacity: 0.8;
 }
-
-
 // to be used for animation on refactor
 // .strike {
 //   text-decoration: line-through;
@@ -279,16 +276,15 @@ footer {
   font-size: 20px;
   text-align: center;
 }
-
 @media only screen and (max-width: 1024px) {
   h1 {
     font-size: 25px;
-    margin-left: 30%;
   }
 
   p {
     font-size: 16px;
   }
+
   ul li {
     font-size: 18px;
   }
@@ -300,7 +296,6 @@ footer {
 @media only screen and (max-width: 768px) {
   h1 {
     font-size: 25px;
-    margin-left: 27%;
   }
 
   p {
@@ -318,12 +313,12 @@ footer {
 @media only screen and (max-device-width : 414px) {
   h1 {
     font-size: 20px;
-    margin-left: 9%;
+    width: 50%;
   }
 
   p {
-      font-size: 18px;
-      opacity: 1;
+    font-size: 18px;
+    opacity: 1;
   }
 
   nav {
@@ -341,11 +336,11 @@ footer {
   }
 
   h2.UAtext {
-    opacity: .8;
+    opacity: 0.8;
   }
 
   p.defText {
-    opacity: .8;
+    opacity: 0.8;
   }
 
   .center {
@@ -353,20 +348,29 @@ footer {
   }
 
   div.container {
-    width: 100%
+    width: 100%;
   }
 
   .container-fluid {
     width: 375px;
   }
+
+  .left {
+    width: 25%;
+    float: left;
+  }
+
+  .right {
+    width: 25%;
+    float: right;
+  }
 }
 @media only screen and (max-device-width : 375px) {
   h1 {
     font-size: 17px;
-    margin-left: 7%;
   }
 
-  p{
+  p {
     font-size: 16px;
     opacity: 1;
   }
@@ -398,7 +402,7 @@ footer {
   }
 
   div.container {
-    width: 100%
+    width: 100%;
   }
 
   .container-fluid {
@@ -408,7 +412,6 @@ footer {
 @media only screen and (max-device-width : 320px) {
   h1 {
     font-size: 13px;
-    margin-left: 4%;
   }
 
   p {
@@ -445,7 +448,7 @@ footer {
   }
 
   div.container {
-    width: 100%
+    width: 100%;
   }
 
   .container-fluid {
